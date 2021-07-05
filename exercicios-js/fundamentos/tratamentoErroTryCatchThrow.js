@@ -2,6 +2,7 @@ function tratarErroELancar(erro) {
     //throw new Error('...........')
     //throw 10
     //throw true
+    //throw false
     //throw 'mensagem'
     throw {
         nome: erro.name,
@@ -23,6 +24,7 @@ function imprimirNomeGritado(obj) {
 
 const obj = { nome: 'Robertinho' }
 imprimirNomeGritado(obj)
+
 
 //const obj = { name: 'Robertinho' }
 //imprimirNomeGritado(obj)
