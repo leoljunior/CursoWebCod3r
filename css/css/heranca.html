@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <title>Herança</title>
     <style>
-        /* ... */
+        
+        body {
+            font-family: monospace;
+            font-size: 40px;
+            border: salmon 7px solid; /*Borda não é passada por herança para o h1/div */
+            padding: 50px;
+        }
+
+        div {
+            border: inherit; /*Especifica que o atributo deve ser herdado*/
+        }
+
     </style>
 </head>
 
