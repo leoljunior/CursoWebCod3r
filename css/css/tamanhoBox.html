@@ -6,7 +6,21 @@
     <style>
         body {
             font-size: 45px;
+            margin: 0;
         }
+
+        div {
+            background-color: tomato;
+            width: 100%;
+            height: 300px;
+           padding: 100px;
+           border: solid 20px;
+           box-sizing: content-box; /*aqui o conteudo da div/body fica com o tamanho da largura da div*/
+           /*só extrapola o valor por causa do padding+border*/
+           box-sizing: border-box;/*aqui os valores de padding+border tbm entram, logo o valor não passa a largura do body*/
+            /*não passa por herança, pode se usar o seletor universal pra aplicar a toda pagina*/
+        }
+
     </style>
 </head>
 <body>

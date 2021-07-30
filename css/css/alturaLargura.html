@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html {
+            height: 100%; /*o html com 100% ele vai ocupar todo viewport*/
+            /*consequentemente os valores relativos irão se aplicar, visualmente*/
+        }
+        
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%;
+            margin: 0;
         }
 
         div {
@@ -17,6 +24,16 @@
         span {
             background-color: dodgerblue;
         }
+
+        span, div {
+            width: 50%;/*isso se aplica na div, não no spam pelo fato dele ser inline*/
+            height: 250px; /*o valor absoluto por si só, se aplica na div*/
+            height: 50%;/*ja o valor relativo, não, pois ele fica em 50% do tamanho*/
+            /*dp body, que por sua vez tem a altura dos elementos somados*/
+            display: block;
+           
+        }
+
     </style>
 </head>
 
