@@ -5,7 +5,34 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        
+        body {
+            font-size: 40px;
+            color: white;
+            background-color: salmon;
+        }
+
+        ul { padding: 0; }
+        div { background-color: seagreen; }
+        span { background-color: blue; }
+        li { background-color: rgb(83, 72, 70); }
+
+        div, span, li {
+            width: 50%;/* height/width não se aplicam*/
+            width: 200px;/*no spam, por padrão seu*/
+            height: 80px;/*display é inline*/
+            padding-top: 30px;
+            text-align: center;
+            display: block;/*a partir daqui o span considera o height/width*/
+            /*display block, cada elemento ocupa sua linha*/
+            display: inline;/*os itens ocupam a msm linha, os li quebram por serem lista*/
+            /*width/height são ignorados*/
+            display: inline-block;/*os itens ocupam a msm linha, porem consideram o width/height*/
+        }
+
+
+
+
     </style>
 </head>
 
