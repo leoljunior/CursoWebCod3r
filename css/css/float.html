@@ -11,19 +11,33 @@
 
         .c1 {
             background-color: red;
+            float: right; /*por padrão qdo o c1 flutuou para direita, o verde ocupou lugar na msm linha*/
         }
 
         .c2 {
             background-color: green;
+            clear: right; /*usando o clear, o verde volta a ocupar sua propria linha*/
+            float: left;
         }
+
         
         .c3 {
             background-color: blue;
+            float: right;
+            clear: both;
         }
 
         .c4 {
             background-color: orange;
+            float: left;
+            clear: both;
         }
+
+        div {
+            height: 150px;
+            width: 150px;
+        }
+
     </style>
 </head>
 
