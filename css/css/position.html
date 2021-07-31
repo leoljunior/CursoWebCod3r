@@ -5,7 +5,60 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static {
+            top: 100px; /*position static não considera top/left*/
+            left: 100px;
+            background-color: coral;
+        }
+        .fixed {
+            position: fixed; /*nessa position o elemento fica fixo*/
+            bottom: 30px;/*msm rolando a pagina*/
+            right: 0px;
+            background-color: darkcyan;
+        }
+        .relative1 {
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: darkorchid;
+        }
+        .absolute1 { /*no position absolute, neste caso que esta dentro do body*/
+            position: absolute;/*aplica as propriedades de posicionamento*/
+            left: 350px;/*inclusive ficando sobre outros*/
+            top: 120px;
+            background-color: deeppink;
+        }
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        .absolute2 {
+            position: absolute; /*nesse caso o absolute sera em relação*/
+            left: 10px;/*ao seu pai*/
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: indigo;
+        }
+        .sticky { /*O sticky permite um scroll, porém ao chegar no top ele fica fixo */
+            position: -webkit-sticky;/*para funcionar no safari*/
+            position: sticky;
+            background-color: cornflowerblue;
+            top: 0; 
+        }
+
+
     </style>
 </head>
 

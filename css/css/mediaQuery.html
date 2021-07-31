@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <title>Media Query</title>
     <style>
+        
         div {
             font-size: 40px;
             margin: 20px;
             padding: 20px;
             background-color: coral;
             border: solid 5px;
-            display: none;
+            display: none; /*div não será mostrada*/
         }
+
+        @media (max-width: 600px) {/*larg max 600 aplica o display block*/
+            .muito-pequeno { display: block; }/*passou disso, volta padrão*/
+        }
+
+        @media (max-width: 1000px), (orientation: portrait) {
+            .muito-pequeno { display: block; }/*aqui aplica, enquanto atender os parâmetros*/
+        }
+
+        @media (min-width: 900px) and (max-width: 1500px) {
+            .intervalo { display: block; }
+        }
+
+
     </style>
 </head>
 <body>
