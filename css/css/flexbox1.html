@@ -6,7 +6,51 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .big {
+            font-size: 1.5em;
+        }
+        
+        .flex-container {
+            display: flex; /*por padrão o flex é row*/
+            flex-direction: column;/*orientar por colunas*/
+            flex-direction: column-reverse;/*orientar por colunas reversa*/
+            flex-direction: row-reverse;/*orientar por linha reversa*/
+            flex-direction: row;/*orientar por linha*/
+            width: 50%;/*com o container 50% vai acontecer o overflow*/
+            flex-wrap: wrap;/*wrap ele quebra linha, eliminando o overflow*/
+            flex-wrap: wrap-reverse;/*quebra linha e reverte*/
+            flex-flow: row wrap;/*uma mistura de wrap com direction*/
+            height: 200px;
+            flex-flow: column-reverse wrap;/*seta coluna reversa e quebra linha*/
+            flex-flow: row wrap;
+
+            /*Age no main axis content*/
+            justify-content: flex-start; /*justifica o conteúdo a partir do start(esquerda) do main*/
+            justify-content: flex-end; /*justifica o conteúdo a partir do end(direita) do main content*/
+            justify-content: center; /*justifica o conteúdo ao centro*/
+            justify-content: space-around; /*justifica para se organizar no container, dando espaços de todos os lados*/
+            justify-content: space-between; /*justifica com espaço entre o conteudo*/
+
+
+            /*Age no Cross Axis */
+            height: 400px;
+            align-items: stretch;/*por padrão é strech, esticam os elementos ao container*/
+            align-items: baseline;/*alinha pela linha base do conteúdo*/
+            align-items: flex-start;/*alinha pelo start do cross, no caso parte cima do conteúdo*/
+            align-items: flex-end;/*alinha pelo end do cross*/
+            align-items: center;
+        
+
+            /*Quando se tem mais de uma linha*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        
+        }
+
+
     </style>
 </head>
 

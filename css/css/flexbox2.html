@@ -6,7 +6,56 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        
+        div {
+            border: 5px solid;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {
+            background-color: salmon;
+            order: 1;/*coloca uma order maior que os outros e ele fica a esquerda, última posição*/
+            order: 0;/*valor padrão*/
+            order: -1;/*order menor o item fica a esquerda, primeira posição*/
+            align-self: center; /*como o padrão é stretch ele alinha ao centro*/
+            align-self: flex-end;/*alinha no end*/
+            align-self: flex-start; /*alinha no start*/
+            align-self: stretch; /*volta o padrão*/
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;/*As divs crescem ocupando o tamanho do container, de acordo com o peso do grow*/
+            /*peso 0 nenhuma div vai crescer*/
+            flex-grow: 1;/*com peso 1 pra todas divs, todas crescem ocupando o container*/            
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-grow: 2;/*com um peso maior a div 1 vai crescer um pouco mais que os outros*/
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1;/*as divs encolhem*/
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;/*div 1 encolhe mais pelo peso 5*/
+        }
+
+
+
     </style>
 </head>
 
