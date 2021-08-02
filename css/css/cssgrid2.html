@@ -20,6 +20,21 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid; /*dando nome para as linhas [nome linha]*/
+            grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr [quatro];
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .d1 {
+            grid-column-start: tres;
+            grid-column-end: quatro;
+            grid-column: dois / quatro;
+            grid-row: 1 / span 2;
+        }
+
+
     </style>
 </head>
 

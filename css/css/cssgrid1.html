@@ -22,6 +22,45 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;/*serão dispostos em 2 colunas ocupando 50% cada uma*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/*serão dispostas 3 colunas com tamanho de 8.33% * 4 dando um total de 12 colunas*/
+            grid-template-columns: repeat(4, 8.33%); /*4 colunas com 8.33%, em 3 linhas*/
+            grid-template-columns: repeat(11, 100px) 100px;/*11 colunas de 100px, mais 100px fora da função*/
+            /*função minmax(100px, 300px) coluna fica entre os valores*/
+            grid-template-columns: 200px 20% 1fr;
+            /*serão dispostas 3 colunas uma com 200px. outra com 20% e a outra com 1fragmento(o restante do espaço)*/
+            grid-template-columns: 3fr 6fr 3fr;
+
+            grid-template-rows: 50% 25% 12.5% 12.5%; /*cada valor corresponde a uma linha*/
+            grid-template-rows: 100px 1fr;/*como são 4 linha mas só foram definidos 2 valores*/
+            /*a terceira/quarta linhas irão ocupar somente o espaço de seus conteúdos*/
+            grid-template-rows: 100px auto;/*linha 1 100px as outras dividem o restante do espaço*/
+            
+        }
+
+        .d7 {
+           grid-column-start: 1; /*coluna d7 começa na linha 1 e termina na 4 */
+           grid-column-end: 4; 
+           grid-column-end: span 3;/*msm efeito anterior, escrito de forma diferente*/
+           grid-row-start: 2;
+           grid-row-end: 5;
+           grid-row-end: span 3;
+        }
+
+        .d10,        
+        .d11 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            /*nesse caso há sobreposição*/
+        }
+        .d10 {
+            z-index: 1; /*muda a profundidade do elemento, no caso tras o 10 para frente do 11*/
+        }
+
     </style>
 </head>
 
