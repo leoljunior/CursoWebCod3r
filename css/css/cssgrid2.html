@@ -23,15 +23,22 @@
 
         body {
             display: grid; /*dando nome para as linhas [nome linha]*/
-            grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr [quatro];
+            grid-template-columns: [um] 1fr [dois meio-dois] 1fr [tres] 1fr [quatro];
             grid-template-rows: repeat(3, 1fr);
+
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-gap: 50px 10px;
+            grid-gap: 15px;
         }
 
         .d1 {
             grid-column-start: tres;
             grid-column-end: quatro;
-            grid-column: dois / quatro;
+            grid-column: meio-dois / quatro;
             grid-row: 1 / span 2;
+            /*grid-area: row-start, column-start, row-end, column end;*/
+            grid-area: 1 / meio-dois / span 3 / quatro;
         }
 
 
