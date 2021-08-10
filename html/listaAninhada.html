@@ -1,0 +1,56 @@
+<h1>Personagens</h1>
+
+<ul class="tree">
+    <li>
+       <span jr-folder>Resident Evil</span>
+        <ul>
+            <li>
+                <span jr-folder>Personagens:</span>
+                <ul>
+                    <li>Chris Redfield</li>
+                    <li>Jill Valentine</li>
+                </ul>                
+            </li>
+            <li>
+                <span jr-folder>Armas:</span>
+                <ul>
+                    <li>Magnum .44</li>
+                    <li>Survivor Knife</li>
+                    <li>Handgun 9mm S.T.A.R.S</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+         
+    <li>
+        <span jr-folder>Resident Evil 2</span>
+        <ul>
+            <li>
+                <span jr-folder>Personagens:</span>
+                <ul>
+                    <li>Leon S. Kennedy</li>
+                    <li>Claire Redfield</li>
+                    <li>Ada Wong</li>
+                </ul>
+            </li>
+            <li>
+                <span jr-folder>Armas:</span>
+                <ul>
+                    <li>Samurai Edge Handgun 9mm</li>
+                    <li>Submachine Gun .380 ACP</li>
+                    <li>RPG ATM-4</li>
+                    <li>Combat Knife</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[jr-folder]').forEach(f => {
+        f.onclick = (e) => {
+            console.log('teste')
+        }
+    })
+</script>
