@@ -10,3 +10,20 @@ String: “10 20 20 8 25 3 0 30 1”
 Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 aconteceu no sétimo jogo.)
 */
+
+const pontos = "10 20 20 8 25 3 0 30 1"
+const s = pontos.split(' ')
+const n = n => parseInt(n)
+const result = s.map(n)
+
+
+const record = (r) => {
+    let cont = 0
+    r.reduce((acm, act) => {
+        if(acm >= act) {
+            cont++
+        }        
+    }, 0)
+    return cont   
+}
+console.log(record(result))
