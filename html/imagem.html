@@ -1,0 +1,113 @@
+<h1>Imagens</h1>
+<div slider>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+    alt="Pedras frente ao mar"
+    width="513" height="342"
+    title="Muro da Cidade por Tarso Bessa"
+    >    
+</p>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+    alt="Intro Cod3r" height="342">    
+</p>
+
+<p class="circular">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+</p>
+
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+    Texto  dsa d ads d asd dsa d asd asd dsa das
+    rew rewr rtewt reyt t r we fgr hgret hy wr
+     twer t wrey yw rte yw ert y wyerty w rtey
+      trew t wrte yw rety  twrey wtr u yerthsgfdh
+      Texto  dsa d ads d asd dsa d asd asd dsa das
+    rew rewr rtewt reyt t r we fgr hgret hy wr
+     twer t wrey yw rte yw ert y wyerty w rtey
+      trew t wrte yw rety  twrey wtr u yerthsgfdh 
+</p>
+
+<p class="cidade"></p>
+
+<p>
+    <picture> <!--dentro de picture é possivel ter várias img, se não for possivel carregar uam, ele carrega a proxima-->
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+            media="(min-width: 600px)">
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+    </picture>
+</p>
+</div>
+<style>
+    .circular {
+        width: 513px;
+        background-color: rgb(128, 197, 236);
+    }
+
+    .texto {
+        width: 400px;
+    }
+    .texto img {
+        margin-right: 10px;
+    }
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+
+    p {
+        display: none;
+        position: absolute;
+    }
+</style>
+
+<script>
+    function move(element, init, end, step, callback) {
+        const newInit = init - step
+        if(newInit >= end) {
+            element.style.left = newInit + 'px'
+            setTimeout(() => move(element, newInit, end, step, callback), 7)
+        }else {
+            callback()
+        }
+    }
+
+    // const p = document.querySelector('[slider] > p')
+    // p.style.display = 'block'
+    // mover(p, 1500, -520, 5, () => {
+    //     console.log('Terminou!!!')
+    // })
+
+    function slider() { //querySelectorAll retorna um node list != de array
+        const elements = document.querySelectorAll('[slider] > p')
+        //Array.from() pega o node list e transforma num array
+        const slides = Array.from(elements)
+        showSlide(slides, slides[0])
+    }
+
+    function showSlide(slides, slide) {
+        slide.style.display = 'block'
+        //innerWidth pego largura atual do browser
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+
+        slide.style.left = `${inicio}px`
+
+        move(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none'
+            showSlide(slides, getNext(slides, slide))
+        })
+    }
+
+    function getNext(list, current) {
+        const i = list.indexOf(current) + 1
+        return i < list.length ? list[i] : list[0] 
+    }
+
+    slider()
+
+</script>

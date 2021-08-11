@@ -1,6 +1,7 @@
 <h1>Formulário</h1>
 
-<form action="http://localhost:3003/usuarios" method="POST">
+<form action="" method="POST">
+    <input type="hidden" name="id" value="3">
     <input type="text" name="nome" id="">
     
     <input type="password" name="senha" id="">
@@ -34,7 +35,8 @@
         <option value="angularjs">Angular</option>
     </select>
 
-    <button>Incluir</button>
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
 </form>
 
 <style>
