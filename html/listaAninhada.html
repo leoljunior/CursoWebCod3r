@@ -50,7 +50,9 @@
 <script>
     document.querySelectorAll('[jr-folder]').forEach(f => {
         f.onclick = (e) => {
-            console.log('teste')
+            const ul = f.nextElementSibling
+            const disp = ul.style.display
+            ul.style.display = disp === 'none' ? 'block' : 'none'
         }
     })
 </script>
