@@ -1,0 +1,104 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<div class="d-flex flex-column-reverse">
+    <div class="w-25 h-25">
+        <div class="mb-5  border border-danger align-self-end bg-success">1</div>
+        <div class="m-4 py-4 border border-success align-self-center bg-danger">2</div>
+        <div class="pt-3 border border-dark bg-warning align-self-start">3</div>
+    </div>
+</div>
+
+<hr>
+
+
+<h1 class="mt-5">1. Grid Básica</h1>
+<div class="container">
+    <div class="row">
+        <div class="col bg-primary">1</div>
+        <div class="col bg-danger">2</div>
+        <div class="col bg-warning">3</div>
+        <div class="col bg-info">4</div>
+        <div class="col bg-secondary">5</div>
+    </div>
+    <div class="row mt-3">
+        <div class="col bg-danger">1</div>
+        <div class="col-4 bg-warning">2</div>
+        <div class="col-5 bg-info">3</div>
+        <div class="col bg-primary">4</div>
+    </div>
+    <div class="column mt-3">
+        <div class="col bg-danger">1</div>
+        <div class="col bg-success">2</div>
+    </div>
+</div>
+
+<hr>
+
+
+<h1 class="mt-5">2. Grid Responsiva</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">1</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">2</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-success">3</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">4</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">5</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-info">6</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-dark text-light">7</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">8</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">9</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-success">10</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">11</div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">12</div>
+    </div>
+</div>
+
+<hr>
+
+<h1 class="mt-5">3. Quebra Linha</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 bg-primary">1</div>
+        <div class="col-3 bg-secondary">2</div>
+        <div class="col-7 bg-success">3</div>
+        <div class="w-100"></div>
+        <!--força quebra de linha-->
+        <div class="col-3 bg-dark text-light">4</div>
+    </div>
+</div>
+
+<hr>
+
+<h1 class="mt-5">4. Ordem</h1>
+<!-- order vai de 1~12  -->
+<div class="container fluid">
+    <div class="row">
+        <div class="col-4 order-5 bg-primary">1</div>
+        <div class="col-4 order-12 bg-danger">2</div>
+        <div class="col-4 order-1 bg-warning">3</div>
+    </div>
+</div>
+
+<hr>
+
+<h1 class="mt-5">5. Offset</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 offset-7 bg-primary">1</div>
+        <div class="col-4 offset-3 bg-secondary">1</div>
+        <div class="col-6 offset-1 bg-success">1</div>
+    </div>
+</div>
+
+<hr>
+
+<h1 class="mt-5">6. Alinhamento</h1>
+<div class="container-fluid">
+    <div class="h-500 row">
+        <div class="col-4 align-self-end bg-primary">1</div>
+        <div class="col-4 align-self-center bg-danger">2</div>
+        <div class="col-4 align-self-start bg-warning">3</div>
+    </div>
+</div>
