@@ -1,0 +1,37 @@
+.container div {
+    width: 95vw;
+    height: 700px;
+    margin: 20px;
+}
+
+.gradient1 {
+    background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+}
+
+.gradient2 {
+    background: linear-gradient(to right, #da4453, #89216b);
+}
+
+.gradient3 {
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+.gradient4 {
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+}
+
+.gradient5 {
+    background: linear-gradient(to right, #159957, #155799);
+}
+
+.gradient6 {
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+
+.gradient7 {
+    background: linear-gradient(to right, #dd5e89, #f7bb97);
+}
+
+.gradient8 {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}

@@ -1,0 +1,100 @@
+.button.effect1 {
+    color: lightblue;
+}
+
+.button.effect1.effect1::after,
+.button.effect1.effect1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.button.effect1.effect1::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: lightblue;
+    border-bottom-color: lightblue;
+}
+
+.button.effect1.effect1::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: lightblue;
+    border-left-color: lightblue;
+}
+
+.button.effect1.effect1:hover::after,
+.button.effect1.effect1:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.button.effect2 {
+    color: lightcoral;
+}
+
+.button.effect2.effect2::after,
+.button.effect2.effect2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: lightcoral;
+    transition: all 0.3s ease;
+    transform: scale(0.85);
+}
+
+.button.effect2.effect2:hover:before {
+    top: 0;
+    transform: scale(1);
+}
+
+.button.effect2.effect2:hover:after {
+    transform: scale(1);
+}
+
+.button.effect3 {
+    color: lightyellow;
+}
+
+.button.effect3.effect3::after,
+.button.effect3.effect3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.button.effect3.effect3::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-color: lightcoral;
+    border-right-color: lightcoral;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.button.effect3.effect3::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: lightcoral;
+    border-left-color: lightcoral;
+}
